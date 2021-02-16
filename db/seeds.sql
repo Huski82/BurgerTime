@@ -1,2 +1,20 @@
 INSERT INTO burgers (burger_name, devoured)
-VALUES ("Hamburger", false), ("Double Charburger", false), ("Bacon HeartAttack Cheeseburger", false); 
+VALUES ("Double Charburger", false)
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Bacon HeartAttack Cheeseburger", false)
+
+INSERT INTO burgers (burger_name, devoured)
+VALUES ("Charburger", false)
+
+
+
+
+
+
+
+
+
+
+
+
