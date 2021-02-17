@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static('public'));
 app.engine('handlebars', eHandle({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
-app.use(routes);
+app.use(router);
 
 
 app.listen(PORT, () =>
