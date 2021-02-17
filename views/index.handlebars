@@ -11,7 +11,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-title">Burger Menu</h2>
+                    <h2 class="card-title">Order Up</h2>
                     <ul class="left-text burgerMenu">
                         {{#each burgers}}
                         {{#unless devoured}}
@@ -26,24 +26,43 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="d-flex justify-content-center">
-                <h5>Add a Burger</h5>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Burgers Eaten</h2>
+                    <ul class="right-text burgerMenu">
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        <li class="burgerList">
+                            {{burger_name}}
+                            <button class="btn btn-primary delBtn" burgerID="{{id}}" type="button">Delete</button>
+                        </li>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
-            <div class="d-flex justify-content-center">
-                <div class="card">
-                    <div class="card-body">
-                        <form id="add-form">
-                            <div class="form-group">
-                                <input type="text" id="burgName">
-                            </div>
-                            <br>
-                            <div class="text-center">
-                                <button id="addBtn" type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <h4>Add Da Burger</h4>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="card">
+                <div class="card-body">
+                    <form id="add-form">
+                        <div class="form-group">
+                            <input type="text" id="burgName">
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button id="addBtn" type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
