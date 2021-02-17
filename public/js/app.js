@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 	if (event) {
 		console.info("DOM loaded");
-    }
-
+    }   
 });
 
-const addBtn = document.getElementById("addBtn");
-const eatBtn = document.getElementById("eatBtn");
+const addBtn = document.getElementById("add-form");
+const eatBtn = document.querySelectorAll(".eatBtn")
+const delBtn = document.querySelectorAll(".delBtn");
+
 
 if(eatBtn) {
     if(eatBtn){
@@ -55,7 +56,20 @@ if (addBtn) {
 				location.reload();
 			} else {
 				alert("Try Again Techincal Difficulties!");
-			}
+            }
 		});
 	});
-} 
+};
+
+delBtn.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault()
+        const id = e.target.getAttribute("burgerId");
+
+        fetch(`/api/burgers/${id}`, {
+            method: 'DELETE',
+        }).then((res) => {
+            location.reload()
+        })
+    })
+});
