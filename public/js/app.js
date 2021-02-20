@@ -9,12 +9,12 @@ const eatBtn = document.querySelectorAll(".eatBtn")
 const delBtn = document.querySelectorAll(".delBtn");
 
 
-if(eatBtn) {
-    if(eatBtn){
+ if(eatBtn){
         eatBtn.forEach((button) => {
-            button.addEvenetListener('click', (e) => {
+            console.log (button)
+            button.addEventListener('click', (e) => {
                 e.preventDefault();
-                const id = e.target.getAttrivute("burgId");
+                const id = e.target.getAttribute("burgId");
                 const devBurg = {devoured: true};
 
                 fetch(`/api/burgers/${id}`, {
@@ -34,8 +34,7 @@ if(eatBtn) {
                 })
             })
         })
-    }
-}; 
+    };
 
 if (addBtn) {
 	addBtn.addEventListener("submit", (e) => {
@@ -55,7 +54,7 @@ if (addBtn) {
 				console.log("Burger added!");
 				location.reload();
 			} else {
-				alert("Try Again Techincal Difficulties!");
+				alert("Try Again Technical Difficulties!");
             }
 		});
 	});
