@@ -8,7 +8,7 @@ The purpose of this app is use express, express-handlebars, and mySQL to create 
 
 Deployed app via Heroku:
 
-<a href="https://nom-on-some-burgers.herokuapp.com/">EAT DA BURGER!</a>
+<a href="https://burgertime-cvs.herokuapp.com/">EAT DA BURGER!</a>
 
 ## Time of Contents
 - [Installation](#installation)
@@ -47,5 +47,5 @@ Steps to this application:
 MIT License
 
 ## Contribution
-Kathleen Welch, Victor Tran, Geoffrey Jiang
+Kathleen Welch
 
